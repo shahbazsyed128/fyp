@@ -51,7 +51,6 @@
             <div class="flex">
             <a href="{{ route('courses.edit',$course->id) }}"><i class="fa fa-user-edit"></i></a> | 
               <a  href="{{ route('courses.show',$course->id) }}"><i class="fa fa-eye text-success" aria-hidden="true"></i></a> |
-
               <form action="{{ route('courses.destroy',$course->id) }}" class=" d-inline"method="POST" id="deletecourse{{$course->id}}"> 
                  @csrf
                 @method('DELETE')
@@ -99,7 +98,6 @@ function ConfirmDelete(id) {
             'success'
           );
           $("#deletecourse"+id).submit();
-
         }
       })
   }
